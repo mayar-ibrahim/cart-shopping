@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+  <body style="background-color:#F6EEE0;">
+
+    <h1 class="cs"> 
+      Cart
+      <i class="fa-solid fa-cart-shopping"></i>
+     </h1>
+    
+    <table>
+      <thead>
+        <tr class="th">
+            <th> Grocery Items </th>
+            <th> item price </th>     
+            <th> Quantity </th>
+            <th> Additions </th>
+            <th> Calc </th>
+            <th> Value </th>
+            
+        </tr>
+      </thead>
+
+        <tbody>
+          <tr class="tr">
+                  <td><input class="ta" type="text" name="Oats" value="Oats" style="color: rgb(164,92,6 );"></td>
+                  <td><input class="td" id="col1" type="number"></td>
+                  <td><input class="td" id="col2" type="number"></td>
+                  <td><input class="td" id="col3" type="number"></td>
+                  <td> <button class="t" onclick="calculate()">Calculate</button> </td><br>
+                  <td>RESULT: <input class="td" id="result1"> </td>
+          </tr>
+        </tbody>
+  
+        <tbody>
+          <tr>    
+                <td> <input class="ta" type="text" name="Almond milk" value="Almond milk" style="color: rgb(164,92,6 );"></td>
+                <td><input class="td" id="col4" type="number"></td>
+                <td><input class="td" id="col5" type="number"></td>
+                <td><input class="td" id="col6" type="number"></td>
+                <td> <button class="t" onclick="calculat()">Calculate</button> </td><br>
+                <td>  RESULT: <input class="td" id="result2"> </td>
+          </tr>
+        </tbody>
+    
+        <tbody>
+            <tr> 
+                <td> <input class="ta" type="text" name="Nuts" value="Nuts" style="color:  rgb(164,92,6 );"> </td>
+                <td><input class="td" id="col7" type="number"></td>
+                <td><input class="td" id="col8" type="number"></td>
+                <td><input class="td" id="col9" type="number"></td>
+                <td> <button class="t" onclick="calcula()">Calculate</button> </td><br>
+                <td>  RESULT: <input class="td" id="result3"> </td>
+            </tr>
+        </tbody>
+      
+        <tbody>
+          <tr>
+                <td> <input class="ta" type="text" name="Greek yogurt" value="Greek yogurt" style="color:  rgb(164,92,6 ) ;"> </td>
+                <td><input class="td" id="col10" type="number"></td>
+                <td><input class="td" id="col11" type="number"></td>
+                <td><input class="td" id="col12" type="number"></td>
+                <td> <button class="t" onclick="calcul()">Calculate</button> </td><br>
+                <td>  RESULT: <input class="td" id="result4"> </td>
+                
+          </tr>
+      </tbody>
+
+
+    </table>
+    <p>
+      <tr> <button class="t" onclick="calcl()">Calculate</button>
+        TOTAL: <input class="td" id="total"> 
+      </tr>
+    </p>
+  
+  
+  
+    <script>
+      function calculate() {
+    var my1 = document.getElementById('col1').value;
+    var my2 = document.getElementById('col2').value;
+    var my3 = document.getElementById('col3').value;
+    var result = document.getElementById('result1');
+    var myResult = parseInt(my1) * parseInt(my2) + parseInt(my3); 
+    result.value = myResult;}
+  
+    function calculat() {
+    var my1 = document.getElementById('col4').value;
+    var my2 = document.getElementById('col5').value;
+    var my3 = document.getElementById('col6').value;
+    var result = document.getElementById('result2');
+    var myResult = parseInt(my1) * parseInt(my2) + parseInt(my3); 
+    result.value = myResult;}
+  
+    function calcula() {
+    var my1 = document.getElementById('col7').value;
+    var my2 = document.getElementById('col8').value;
+    var my3 = document.getElementById('col9').value;
+    var result = document.getElementById('result3');
+    var myResult = parseInt(my1) * parseInt(my2) + parseInt(my3); 
+    result.value = myResult;}
+  
+    function calcul() {
+    var my1 = document.getElementById('col10').value;
+    var my2 = document.getElementById('col11').value;
+    var my3 = document.getElementById('col12').value;
+    var result = document.getElementById('result4');
+    var myResult = parseInt(my1) * parseInt(my2)  + parseInt(my3); 
+    result.value = myResult;}
+
+    function calcl() {
+    var my1 = document.getElementById('result1').value;
+    var my2 = document.getElementById('result2').value;
+    var my3 = document.getElementById('result3').value;
+    var my4 = document.getElementById('result4').value;
+    var result = document.getElementById('total');
+    var myResult = parseInt(my1) + parseInt(my2)  + parseInt(my3) + parseInt(my4); 
+    result.value = myResult;}
+   
+    </script>
+  
+</body>
+</html>
